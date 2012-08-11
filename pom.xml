@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.shsz.young</groupId>
+		<artifactId>dev-parent</artifactId>
+		<version>3.0</version>
+	</parent>
+	<groupId>com.shsz.common</groupId>
+	<artifactId>restfulBaseDataShare</artifactId>
+	<packaging>war</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>com.shsz.restfulBaseDataShare</name>
+	<url>http://www.shsz.com</url>
+
+	 
+
+	<dependencies>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.7.1</version>
+		</dependency>
+		
+		<!-- Spring 3 dependencies -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>SpringMVC</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>7.4.0.v20110414</version>
+				<configuration>
+					<scanIntervalSeconds>1</scanIntervalSeconds>
+					<webAppConfig>
+						<contextPath>/centralizeManage</contextPath>
+						<defaultsDescriptor>src/main/resources/config/jetty/webdefault.xml</defaultsDescriptor>
+					</webAppConfig>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
