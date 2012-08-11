@@ -5,12 +5,9 @@
 	http://www.springframework.org/schema/security
 	http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
 
-	<!-- <http auto-config="true"> <intercept-url pattern="/welcome*" access="ROLE_USER" 
-		/> <form-login login-page="/login" default-target-url="/welcome" authentication-failure-url="/loginfailed" 
-		/> <logout logout-success-url="/logout" /> </http> -->
-	<http auto-config="true"/>
+	<!-- 采用spring-security完成Http鉴权 -->
 	<http>
-		<intercept-url pattern="/rest*" access="ROLE_USER" />
+		<intercept-url pattern="/rest/kfc/brands/*" access="ROLE_USER" />
 		<http-basic />
 	</http>
 
