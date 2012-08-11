@@ -25,7 +25,11 @@
 			<artifactId>jackson-core-asl</artifactId>
 			<version>1.7.1</version>
 		</dependency>
-		
+		<!-- springside -->
+		<dependency>
+			<groupId>org.springside</groupId>
+			<artifactId>springside3-core</artifactId>
+		</dependency>
 		<!-- Spring 3 dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -69,6 +73,10 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
 		</dependency>
 	</dependencies>
 
